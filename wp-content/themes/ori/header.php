@@ -19,7 +19,6 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php include_once("analyticstracking.php") ?>
 <?php zo_get_page_loading(); ?>
 <div id="page">
 	<header id="masthead" class="site-header">
