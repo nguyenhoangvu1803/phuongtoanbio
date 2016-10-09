@@ -1,0 +1,406 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Reset HTML/CSS, Unitest, Body
+2. Page Title
+3. Primary
+-------------------------------------------------------------------*/
+
+/* ==========================================================================
+   [Start] 1. Reset HTML/CSS, Unitest, Body, @Extend
+========================================================================== */
+
+/* Style Dark */
+body.zo-dark #page {
+	background: #444;
+}
+/* !important for theme */
+.page #content > article > .entry-content > .vc_row {
+	margin: 0;
+}
+#page {
+	overflow: hidden;
+}
+*::-moz-selection {
+    background: $primary_color;
+    color: #fff;
+}
+*::-webkit-selection {
+    background: $primary_color;
+    color: #fff;
+}
+*::selection {
+    background: $primary_color;
+    color: #fff;
+}
+.align-center {
+    text-align: center;
+}
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+.content-align-center {
+	text-align: center;
+}
+.content-align-right {
+	text-align: right;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.zo-animation {
+	visibility: hidden;
+}
+.entry-page-image {
+    margin-bottom: 14px;
+}
+#main #page-default {
+    position: relative;
+}
+a, a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+    @include transition(all 300ms linear 0ms);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    a {
+        color: $primary_color;
+    }
+}
+p {
+    margin: 0 0 20px;
+	line-height: 22px;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+.w50 {
+    float: left;
+    width: 50%;
+}
+body .wpb_content_element,
+body .wpb_button {
+    margin: 0 auto;
+}
+.zo-row-full-width .no-container {
+    @media screen and (max-width: 991px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .row {
+        margin: 0;
+        .vc_column_container {
+            padding: 0;
+        }
+    }
+}
+
+.no-container > .row { margin: 0; }
+
+.bg-effect-lg,
+.bg-effect-sm {
+    background: repeat-y center center;
+    background-size: 100%;
+}
+.bg-position-center {
+    background-position: center center!important;
+}
+.bg-dark-inset{
+    .wpb_wrapper {
+        background: #060606;
+    }
+}
+.bg-main-inset{
+    .wpb_wrapper {
+        background: $primary_color;
+    }
+}
+
+.wrap-btn-inline {
+    display: inline-block;
+    margin-right: 20px;
+	@include breakpoint-max(480px){
+		margin-right: 0px;
+		+ .wrap-btn-inline{
+			margin-top: 20px;
+		}
+	}
+}
+/* ==========================================================================
+   [End] 1. Reset HTML/CSS, Unitest, Body
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 2. Page Title
+========================================================================== */
+
+#zo-page-element-wrap {
+	.row {
+		/* Content in div middle */
+		display: flex; 
+		align-items : center
+	}
+}
+
+#page-title-text{
+	h1{
+		padding: 0;
+		margin: 0 0 15px;
+	}
+    .page-sub-title {
+        padding: 0;
+		margin: 0;
+    }
+}
+
+#breadcrumb-text {
+	.breadcrumbs {
+		margin: 0;
+		padding: 0;
+		display: inline;
+		li {
+			padding: 0 8px 0 12px;
+			display: inline-block;
+			position: relative;
+			a {
+				color: #acacac;
+				margin-left: 4px;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+			&:after {
+				content: "\f101";
+				font-family: FontAwesome;
+				font-size: 12px;
+				float: right;
+				position: absolute;
+				right:-6px;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+				&:after {
+					content: "";
+				}
+			}
+			a:hover {
+				color: $primary_color;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   [End] 2. Page Title
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 3. Primary
+========================================================================== */
+/*
+----> List Style
+*/
+.list-style-check {
+    li {
+        color: #9c9c9c;
+        line-height: 31px;
+        position: relative;
+        padding-left: 36px;
+        &:before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            color: #fff;
+            font-size: 18px;
+            position: absolute;
+            top: 1px;
+            left: 4px;
+            z-index: 1;
+        }
+        &:after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            background-color: #db5896;
+            @include border-radius(2px);
+            border: 2px solid #ba2b6f;
+            position: absolute;
+            top: 4px;
+            left: 0;
+        }
+    }
+}
+.list-style-check.green {
+    li {
+        &:after {
+            background-color: #81b748;
+            border-color: #5a951b;
+        }
+    }
+}
+/*
+----> End List Style
+*/
+
+/*
+----> VC Row Overlay Color
+*/
+.row-overlay-color{
+	position: relative;
+	.zo-overlay-color { 
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0.9;
+	}
+}
+/*
+----> End VC Row Overlay Color
+*/
+
+/*
+----> VC Row Backgrund Color Custom
+*/
+.row-custom-bg-color {
+    position: relative;
+    .zo-custom-bg-left, .zo-custom-bg-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+    .zo-custom-bg-right {
+        left: inherit;
+        right: 0;
+    }
+}
+/*
+----> End VC Row Backgrund Color Custom
+*/
+.zo-row-arrow {
+    border: 20px solid;
+    bottom: 0;
+    height: 20px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 38px;
+}
+.row-arrow-top {
+    .zo-row-arrow {
+        bottom: inherit;
+        top: 0;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.row-overlay-color,
+.zo_parallax {
+  position: relative;
+}
+.row-arrow-bottom {
+    .zo-row-arrow {
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+#zo-loadding {
+    background: #fff;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    .ball {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 50%;
+        @include transform(translate(0px, -50%));
+    }
+}
+
+
+/* [Start] Eror Page
+==============================================================*/
+.error404 {
+    #main {
+        padding: 0!important;
+        #primary {
+            padding: 160px 0;
+        }
+    }
+    .entry-error404 {
+        text-align: center;
+        color: #333;
+        .entry-header {
+            img {
+                margin-bottom: 40px;
+            }
+            h1 {
+				@include breakpoint-min(992px){
+					line-height: 1;
+					font-size: 156px;
+				}
+                color: $primary_color;
+            }
+            h2 {
+				color: #171717;
+                font-size: 23px;
+				margin-bottom: 70px;
+            }
+        }
+        .entry-content {
+			position: relative;
+			height: 40px;
+			width: 370px;
+			margin: 0 auto 20px;
+			input:not(#searchsubmit) {
+			    display: inline-block;
+				width: 100%;
+				background-color: #f8f7f7;
+				border-color: #e9e8e8;
+				height: 38px;
+				line-height: 38px;
+			}
+			#searchsubmit {
+				height: 38px;
+				line-height: 38px;
+			}
+        }
+        .entry-footer {
+            .btn-home {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+/* [End] Eror Page
+==============================================================*/
+.zo-carousel.owl-carousel .owl-item img {
+    width: auto;
+}

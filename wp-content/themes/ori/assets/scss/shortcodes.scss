@@ -1,0 +1,1730 @@
+/*------------------------------------------------------------------
+[All Style Shortcode]
+
+	1. Shortcode Fancy Box || Carousel Fancy Box || Fancybox Single
+	2. Shortcode Carousel
+	3. Shortcode Team
+    4. Shortcode Testimonial
+	5. Tab
+	6. Counter
+	7. Accordion
+	8. Progress
+	9. Pricing
+	10. Zo Grid
+	11. Zo Masonry
+	12. Heading & Features
+	13. Particles
+-------------------------------------------------------------------*/
+/* ==========================================================================
+   [Start] 1. Shortcode Fancy Box
+========================================================================== */
+.zo-carousel-fancyboxes-wraper {
+	.zo-carousel-fancyboxes-body {
+		position: relative;
+		padding-top: 80px;
+		display: none;
+		&.owl-carousel {
+			display: block;
+			@include animation(0.7s ease 0s fadeIn);
+		}
+		.owl-nav {
+			position: absolute;
+			margin: 0;
+			top: 0;
+			left: 50%;
+			@include transform(translateX(-50%));
+			> div {
+				background-color: #171717;
+				color: #fff;
+				display: inline-block;
+				height: 25px;
+				width: 25px;
+				line-height: 25px;
+				margin: 0 5px;
+				padding: 0;
+				opacity: 1;
+				text-align: center;
+				position: relative;
+				cursor: pointer;
+				@include border-radius(2px);
+				&:hover {
+					background-color: $primary_color;
+				}
+			}
+			i {
+				font-size: 12px;
+				@include transform(translateY(-1px));
+			}
+		}
+		.zo-carousel-fancy-item {
+			.zo-carousel-fancy-box-icon {
+				background-color: #f0efef;
+				border: 5px solid #f0efef;
+				height: 95px;
+				line-height: 95px;
+				margin: 0 auto 30px;
+				width: 95px;
+				@include border-radius(50%);
+				i {
+					color: $primary_color;
+					font-size: 27px;
+				}
+			}
+			> h3 {
+				color: $primary_color;
+				font-size: 18px;
+				line-height: 22px;
+				font-weight: bold;
+				margin-bottom: 18px;
+			}
+			&:hover {
+				.zo-carousel-fancy-box-icon {
+					background-color: $primary_color;
+					i {
+						color: #fff;
+						@include animation(0.3s ease 0s normal forwards 1 running toTopFromBottom);
+					}
+				}
+			}
+			img {
+				width: initial;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.zo-carousel-fancy-box-content a {
+			color: #171717;
+			&:hover {
+				color: $primary_color;
+			}
+		}
+	}
+	&.nav-bottom-center {
+		.zo-carousel-fancyboxes-body {
+			padding-top: 0;
+			.owl-nav {
+				top: 100%;
+			}
+		}
+	}
+	&.icon-style-small {
+		.zo-carousel-fancy-item {
+			.zo-carousel-fancy-box-icon {
+				height: 70px;
+				width: 70px;
+				line-height: 75px;
+				border: 2px solid #f0efef;
+				background-color: #fff;
+			}
+		}
+	}
+	&.icon-style-black {
+		.zo-carousel-fancyboxes-body {
+			.zo-carousel-fancy-item {
+				.zo-carousel-fancy-box-icon {
+					background-color: #fff;
+					i {
+						color: #171717;
+					}
+				}
+				&:hover {
+					.zo-carousel-fancy-box-icon {
+						background-color: #171717;
+						i {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.hover-no-border {
+		.zo-carousel-fancyboxes-body {
+			.zo-carousel-fancy-item {
+				.zo-carousel-fancy-box-icon {
+					width: 70px;
+					height: 70px;
+					line-height: 70px;
+				}
+				&:hover {
+					.zo-carousel-fancy-box-icon {
+						border-color: $primary_color;
+					}
+				}
+			}
+		}
+	}
+	&.template-our-client {
+		.owl-carousel .owl-nav {
+			left: calc(100% - 30px);
+			width: 70px;
+			top: -55px;
+		}
+		.zo-carousel-fancyboxes-body {
+			padding-top: 0;
+		}
+		.zo-carousel-fancy-item {
+			background-color: #FFF;
+			border: 1px solid #e9e8e8;
+			opacity: 0.75;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	&.template-zo_carousel_fancybox--style-black {
+		.zo-carousel-fancyboxes-body {
+			padding-top: 30px;
+			padding-bottom: 55px;
+			.zo-carousel-fancy-item {
+				.zo-carousel-fancy-box-icon {
+					background-color: #fff;
+					i {
+						color: #171717;
+					}
+				}
+				> h3 { 
+					color: #171717;
+				}
+				&:hover {
+					.zo-carousel-fancy-box-icon {
+						background-color: #171717;
+						i {
+							color: #fff;
+						}
+					}
+				}
+			}
+			.zo-carousel-fancy-box-content a {
+				color: $primary_color;
+				&:hover {
+					color: #171717;
+				}
+			}
+			.owl-nav {
+				top: initial;
+				bottom: 0;
+			}
+		}
+	}
+	&.style-black-no-border-icon {
+		.zo-carousel-fancyboxes-body {
+			.zo-carousel-fancy-item {
+				.zo-carousel-fancy-box-icon {
+					background-color: transparent;
+					border: none;
+					height: initial;
+					line-height: initial;
+					margin: 0 auto 30px;
+					width: initial;
+					@include border-radius(0);
+					i {
+						font-size: 27px;
+						@include transition(color 300ms ease);
+					}
+				}
+				> h3 { 
+					color: $primary_color;
+				}
+				&:hover {
+					.zo-carousel-fancy-box-icon {
+						background-color: transparent;
+						i {
+							color: $primary_color;
+							@include animation(none);
+						}
+					}
+				}
+			}
+			.zo-carousel-fancy-box-content a {
+				color: #171717;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+	}
+	&.custom-position-nav {
+		#zo-carousel-fancybox {
+			padding-bottom: 0;
+			padding-top: 0;
+		}
+		.owl-nav {
+			bottom: 20px !important;
+			left: 20px;
+			transform: none;
+			> div {
+				width: 40px;
+				height: 40px;
+				opacity: 0.6;
+				&:hover {
+					opacity: 1;
+				}
+				i {
+					line-height: 40px;
+				}
+			}
+		}
+	}
+	&.icon-left {
+		.zo-carousel-fancy-item {
+			margin-bottom: 30px;
+			.zo-carousel-fancy-box-icon {
+				margin: 0 15px 0 0;
+				float: left;
+				text-align: center;
+			}
+			.zo-carousel-fancy-box-content {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&.icon-bg-white {
+		.zo-carousel-fancy-item {
+			.zo-carousel-fancy-box-icon {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.zo-fancyboxes-wraper {
+	.zo-fancybox-item {
+		&:hover {
+			.zo-fancybox-icon {
+				background-color: $primary_color;
+				border-color: #fff;
+				color: #fff;
+				i {
+					@include animation(0.3s ease 0s normal forwards 1 running toTopFromBottom);
+				}
+			}
+		}
+		.zo-fancybox-icon {
+			background-color: transparent;
+			border: 2px solid #444;
+			height: 70px;
+			width: 70px;
+			line-height: 65px;
+			margin: 0 auto 30px;
+			font-size: 30px;
+			color: $primary_color;
+			position: relative;
+			@include border-radius(50%);
+		}
+		.zo-fancybox-title {
+			margin-bottom: 20px;
+			color: $primary_color;
+		}
+		.zo-fancybox-content {
+			margin-bottom: 30px;
+			line-height: 22px;
+			p {
+				margin: 0;
+			}
+		}
+	}
+	&.icon-left {
+		.zo-fancybox-item {
+			margin-bottom: 30px;
+			.zo-fancybox-icon {
+				margin: 0 15px 0 0;
+				float: left;
+			}
+			.zo-fancybox-body {
+				margin-left: 90px;
+			}
+			.zo-fancybox-content {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&.style-black {
+		.zo-fancybox-item {
+			&:hover {
+				.zo-fancybox-icon {
+					background-color: #171717;
+					i { 
+						color: #fff;
+					}
+				}
+			}
+			.zo-fancybox-icon {
+				height: 95px;
+				width: 95px;
+				line-height: 90px;
+				border: 5px solid #f0efef;
+				@include border-radius(50%);
+				color: #171717;
+			}
+			.zo-fancybox-body {
+				.zo-fancybox-title {
+					color: #171717;
+				}
+			}
+			.zo-fancybox-content {
+				.zo-fancybox-link {
+					color: $primary_color;
+					&:hover {
+						color: #171717;
+					}
+				}
+			}
+		}
+	}
+	&.padding-content {
+		.zo-fancybox-content {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}
+
+.template-zo_fancybox_single--style-2{
+	.zo-fancybox-item {
+		.zo-fancybox-icon {
+			background-color: #f0efef;
+			border: 5px solid #f0efef;
+			height: 95px;
+			line-height: 85px;
+			margin: 0 auto 30px;
+			width: 95px;
+			@include border-radius(50%);
+			i {
+				color: $primary_color;
+				font-size: 27px;
+			}
+		}
+		&:hover {
+			.zo-fancybox-icon {
+				background-color: $primary_color;
+				i {
+					color: #fff;
+					@include animation(0.3s ease 0s normal forwards 1 running toTopFromBottom);
+				}
+			}
+		}
+	}
+	.zo-fancybox-link {
+		display: inline-block;
+	}
+}
+
+.template-zo_fancybox_single--style-3 {
+	padding: 30px 10px;
+	background: #fff;
+	@include border-radius(2px);
+	.zo-fancybox-item {
+		.zo-fancybox-icon {
+			color: #202830;
+			border: 0;
+			margin-bottom: 10px;
+			@include border-radius(0);
+		}
+		.zo-fancybox-title {
+			font-size: 15px;
+			margin-bottom: 0;
+		}
+		&:hover {
+			.zo-fancybox-icon {
+				background-color: transparent;
+				color: initial;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   [End] 1. Shortcode Fancy Box
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 2. Shortcode Carousel
+========================================================================== */
+.zo-carousel-wrap {
+	.zo-carousel {
+		display: none;
+		&.owl-carousel {
+			display: block;
+			@include animation(0.7s ease 0s fadeIn);
+		}
+	}
+	.owl-carousel .owl-nav {
+		position: absolute;
+		margin: 0;
+		top: 0;
+		left: 50%;
+		@include transform(translateX(-50%));
+		> div {
+			background-color: #171717;
+			color: #fff;
+			display: inline-block;
+			height: 25px;
+			width: 25px;
+			line-height: 25px;
+			margin: 0 5px;
+			padding: 0;
+			opacity: 1;
+			text-align: center;
+			position: relative;
+			cursor: pointer;
+			@include border-radius(2px);
+			&:hover {
+				background-color: $primary_color;
+			}
+		}
+		i {
+			font-size: 12px;
+			@include transform(translateY(-1px));
+		}
+	}
+	.owl-carousel.nav-center-bottom{ 
+		&.template-zo_carousel {
+			padding-top: 0px;
+		}
+		.owl-nav {
+			position: static;
+			text-align: center;
+			@include transform(none);
+		}
+	}
+	.owl-carousel.nav-right-top .owl-nav {
+		left: initial;
+		right: 0;
+		top: -60px;
+		@include transform(none);
+		.owl-next {
+			margin-right: 0px;
+		}
+	}
+}
+
+.template-zo_carousel {
+	position: relative;
+	padding-top: 80px;
+	.zo-carousel-item {
+		background-color: #fff;
+		margin-bottom: 30px;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+		-webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+		@include border-radius(2px);
+		&:hover{
+			.zo-grid-media .zo-carousel-overlay {
+				left: 0;
+			}
+		}
+		.zo-grid-media {
+			position: relative;
+			overflow: hidden;
+			img {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.zo-carousel-overlay {
+				position: absolute;
+				left: -100%;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: $primary_color;
+				opacity: 0.9;
+				@include transition(left 0.3s ease);
+				a {
+					color: #fff;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					background: #171717;
+					opacity: 0.8;
+					text-align: center;
+					height: 34px;
+					width: 34px;
+					line-height: 34px;
+					font-size: 14px;
+					@include border-radius(2px);
+					@include transform(translate(-50%,-50%));
+					&:hover {
+						opacity: 0.9;
+						i {
+							@include animation(0.3s ease toTopFromBottom);
+						}
+					}
+					&.zo-carousel-link {
+						left: calc(50% - 22px);
+					}
+					&.zo-carousel-zoom {
+						left: calc(50% + 22px);
+					}
+				}
+			}
+		}
+		.zo-carousel-detail {
+			padding: 20px;
+			i {
+				background: $primary_color;
+				color: #fff;
+				float: left;
+				font-size: 14px;
+				height: 34px;
+				line-height: 34px;
+				margin-right: 20px;
+				text-align: center;
+				width: 34px;
+				@include border-radius(2px);
+			}
+			.zo-carousel-meta {
+				margin-left: 54px;
+				.zo-carousel-title{
+					margin-bottom: 10px;
+					a {
+						color: #171717;
+						font-size: 15px;
+						line-height: 18px;
+						font-weight: bold;
+						&:hover {
+							color: $primary_color;
+						}
+					}
+				}
+				.zo-carousel-categories a {
+					color: #acacac;
+					font-size: 12px;
+					&:hover {
+						color: #171717;
+					}
+				}
+			}
+		}
+	}
+}
+
+&.template-zo_carousel--portfolio {
+	.zo-carousel-item {
+		margin-bottom: 30px;
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			.zo-carousel-overlay {
+				left: 0;
+			}
+		}
+		.zo-carousel-overlay {
+			padding: 20px;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: -100%;
+			top: 0;
+			@include transition(left 0.3s ease 0s);
+			@include background-opacity($primary_color,0.9);
+			a {
+				position: static;
+				display: inline-block;
+				@include transform(translate(0));
+			}
+			.zo-carousel-title a {
+				background: transparent;
+				color: #171717;
+				font-size: 18px;
+				line-height: 22px;
+				margin-bottom: 20px;
+				font-weight: bold;
+				width: initial;
+				height: initial;
+				&:hover {
+					color: #fff;
+				}
+			}
+			.zo-carousel-content {
+				color: #fff;
+				line-height: 22px;
+				margin: 0 0 20px;
+			}
+			.zo-carousel-btn {
+				bottom: 20px;
+				position: absolute;
+			}
+			a {
+				color: #fff;
+				background: #171717;
+				opacity: 0.8;
+				text-align: center;
+				height: 34px;
+				width: 34px;
+				line-height: 34px;
+				font-size: 14px;
+				@include border-radius(2px);
+				&:hover {
+					opacity: 0.9;
+					i {
+						@include animation(0.3s ease toTopFromBottom);
+					}
+				}
+			}
+		}
+	}
+}
+
+.template-zo_carousel--latest-news {
+	&.nav-top-center {
+		padding-top: 80px;
+	}
+	&:not(.nav-top-center).owl-carousel .owl-nav {
+		left: calc(100% - 30px);
+		width: 70px;
+		top: -55px;
+	}
+	.zo-carousel-item {
+		.zo-carousel-media {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 20px;
+			@include border-radius(2px);
+			> a {
+				text-align: center;
+				img {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			.zo-carousel-date {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				color: #FFF;
+				background-color: #171717;
+				font-size: 12px;
+				text-align: center;
+				padding: 0 10px 10px 10px;
+				@include border-radius(2px);
+				span {
+					display: block;
+					width: 100%;
+				}
+				span:first-child {
+					font-size: 35px;
+					font-weight: bold;
+					line-height: 1.428571429;
+				}
+				
+			}
+		}
+		.zo-carousel-title {
+			font-size: 16px;
+			margin-bottom: 15px;
+			line-height: 20px;
+			font-weight: bold;
+			text-transform: capitalize;
+			a {
+				color: $primary_color;
+				&:hover {
+					color: #171717;
+				}
+			}
+		}
+		.zo-carousel-content {
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+		.zo-carousel-meta {
+			font-size: 12px;
+			color: #5c5c5c;
+			div {
+				display: inline-block;
+			}
+			a {
+				color: #5c5c5c;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+			i {
+				margin-right: 5px;
+			}
+			> div + div {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+.template-zo_carousel--testimonials {
+	&.nav-top-center {
+		padding-top: 80px;
+	}
+	&:not(.nav-top-center).owl-carousel .owl-nav {
+		left: calc(100% - 30px);
+		width: 70px;
+		top: -55px;
+	}
+	.zo-carousel-item {
+		.zo-carousel-content {
+			position: relative;
+			background-color: #f8f7f7;
+			border: 1px solid #e9e8e8;
+			margin-bottom: 20px;
+			padding: 20px;
+			@include border-radius(2px);
+			p{ 
+				margin-top: 20px; 
+			}
+			div {
+				color: #5c5c5c;
+				font-size: 16px;
+			}
+		}
+		.zo-carousel-meta {
+			.zo-carousel-avata {
+				display: inline-block;
+				float: left;
+				img {
+					@include border-radius(50%);
+				}
+			}
+			.zo-carousel-details {
+				margin-left: 73px;
+				.zo-carousel-title {
+					color: $primary_color;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+
+.template-zo_carousel--testimonials-content-primary-color {
+	padding-bottom: 60px;
+	text-align: center;
+	&.owl-carousel .owl-nav {
+		width: 70px;
+		top: initial;
+		bottom: 0;
+		> div {
+			background: #333;
+			&:hover {
+				background: $primary_color;
+			}
+		}
+	}
+	.zo-carousel-content {
+		margin-bottom: 20px;
+		padding: 20px;
+		@include border-radius(2px);
+		i {
+			color: #5c5c5c;
+			font-size: 28px;
+		}
+		p {
+			color: $primary_color;
+			font-size: 18px;
+			font-style: italic;
+			line-height: 28px;
+			margin-top: 20px;
+		}
+	}
+	.zo-carousel-title {
+		color: #fff;
+		text-transform: capitalize;
+	}
+}
+
+.template-zo_carousel--team {
+	padding-top: 80px;
+	text-align: center;
+	.zo-carousel-item{
+		&:hover {
+			.zo-carousel-media .zo-carousel-overlay {
+				left: 0;
+			}
+		}
+		.zo-carousel-media {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 20px;
+			img {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.zo-carousel-overlay {
+				position: absolute;
+				left: -100%;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: $primary_color;
+				opacity: 0.9;
+				@include transition(left 0.3s ease);
+				.socials {
+					position: absolute;
+					text-align: center;
+					top: 50%;
+					left: 50%;
+					width: 100%;
+					@include transform(translate(-50%,-50%));
+					li{
+						&:nth-child(1) a:hover {
+							background: #5d82d1;
+						}
+						&:nth-child(2) a:hover {
+							background: #40bff5;
+						}
+						&:nth-child(3) a:hover {
+							background: #eb5e4c;
+						}
+						&:nth-child(4) a:hover {
+							background: #238cc8;
+						}
+					}
+				}
+				a {
+					display: inline-block;
+					color: #fff;
+					background: #171717;
+					opacity: 0.8;
+					height: 34px;
+					width: 34px;
+					line-height: 34px;
+					font-size: 14px;
+					@include border-radius(2px);
+					&:hover {
+						opacity: 0.9;
+						i {
+							@include animation(0.3s ease toTopFromBottom);
+						}
+					}
+				}
+			}
+		}
+		.zo-carousel-title {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 15px;
+			font-weight: bold;
+			a {
+				color: $primary_color;
+			}
+		}
+		.zo-carousel-position a {
+			color: #5c5c5c;
+			display: inline-block;
+			font-size: 14px;
+			font-style: italic;
+			margin-bottom: 15px;
+			&:hover { color: $primary_color; }
+		}
+	}
+}
+/* ==========================================================================
+   [End] 2. Shortcode Carousel
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 3. Team
+========================================================================== */
+
+/* ==========================================================================
+   [End] 3. Team
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 4. Testimonial
+========================================================================== */
+
+/* ==========================================================================
+   [End] 4. Testimonial
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 5. Tabs
+========================================================================== */
+
+/* ==========================================================================
+   [End] 5. Tabs
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 6. Counter
+========================================================================== */
+.zo-counter-wraper {
+	.zo-counter-item {
+		text-align: center;
+		.zo-counter-icon {
+			color: #fff;
+			height: 70px;
+			line-height: 66px;
+			width: 70px;
+			border: 2px solid #444;
+			margin: 0 auto 30px;
+			font-size: 30px;
+			display: inline-block;
+			@include border-radius(50%);
+		}
+		.zo-counter {
+			color: #fff;
+			font-size: 45px;
+			font-weight: bold;
+			margin-bottom: 18px;
+		}
+		.zo-counter-title {
+			color: #171717;
+			font-weight: normal;
+		}
+		&:hover {
+			.zo-icon { 
+				border-color: #fff;
+				i {
+					@include animation(0.3s ease toTopFromBottom);
+				}
+			}
+		}
+	}
+	&.style-2 {
+		.zo-counter-item .zo-counter-icon {
+			border-color: $primary_color;
+		}
+		.zo-counter-title {
+			color: $primary_color;
+		}
+	}
+}
+/* ==========================================================================
+   [End] 6. Counter
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 7. Accordion
+========================================================================== */
+.vc_tta-accordion.vc_general.vc_tta {
+	.vc_tta-panels-container{
+		.vc_tta-panels {
+			.vc_tta-panel {
+				background-color: #FFF;
+				border: 1px solid #d6d9df;
+				padding: 0;
+				margin-bottom: 10px;
+				@include border-radius(3px);
+				.vc_tta-panel-heading {
+					padding: 9px 20px;
+					margin: 0;
+					cursor: pointer;
+					background-color: #fff;
+					border: 0;
+					a{
+						color: #171717;
+						padding: 0;
+						i {
+							left: calc(100% - 20px);
+							background-color: #7d7d7d;
+							height: 20px;
+							width: 20px;
+							line-height: 20px;
+							font-size: 12px;
+							text-align: center;
+							&:before, &:after {
+								border-color: #fff;
+								@include transform(translate(-50%,-50%));
+							}
+							&:before {
+								left: 50%;
+								border-width: 3px 0 0;
+							}
+							&:after {
+								display: none;
+								top: 50%;
+								border-width: 0 0 0 3px;
+							}
+						}
+					}
+					.vc_tta-panel-title {
+						font-size: 13px;
+						font-weight: bold;
+						color: #7d7d7d;
+						line-height: 24px;
+					}
+				}
+				.vc_tta-panel-body {
+					background-color: #fff;
+					border-top: 1px solid #d6d9df;
+					padding: 20px;
+					line-height: 22px;
+					margin-top: 0;
+					font-size: 13px;
+				}
+			}
+			.vc_tta-panel.vc_active {
+				.vc_tta-panel-heading {
+					background-color: #f8f7f7;
+					a{
+						color: $primary_color;
+						i {
+							background-color: $primary_color;
+							&:after {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   [End] 7. Accordion
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 8. Progress
+========================================================================== */
+.zo-progress-wraper {
+    .progress .progress-bar {
+        transition-duration: 1s;
+    }
+}
+.zo-progress-layout-default {
+    .zo-progress-main {
+        &.bar-icon {
+            padding-left: 50px;
+            position: relative;
+        }
+        .zo-progress-icon {
+            position: absolute;
+            left: 0;
+            i {
+                color: #8f8f8f;
+                font-size: 34px;
+            }
+        }
+		.zo-progress-title, .zo-progress-value-text {
+			display: inline-block;
+			padding-bottom: 10px;
+			color: #171717;
+			font-size: 15px;
+		}
+		.zo-progress-title {
+			font-weight: bold;
+			position: relative;
+		}
+		.zo-progress-value-text {
+			margin-left: 20px;
+		}
+        .zo-progress {
+            overflow: visible;
+            background-color: $primary_color;
+            height: 11px;
+            width: 100%;
+            position: relative;
+            margin: 0 0 20px;
+            @include box-shadow(none);
+            @include border-radius(3px);
+            .progress-bar {
+                width: 20%;
+                overflow: visible;
+                @extend .bg-effect-lg;
+                @include box-shadow(none);
+                background-color: $primary_color;
+                line-height: 40px;
+                text-align: right;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   [End] 8. Progress
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 9. Pricing
+========================================================================== */
+.zo-pricing-default {
+    .zo-pricing-item {
+		margin-bottom: 30px;
+		&:hover {
+			.zo-pricing-inner {
+				.zo-pricing-header {
+					background: $primary_color;
+				}
+				.zo-pricing-title, .zo-pricing-price .time {
+					color: #fff;
+				}
+			}
+		}
+        .zo-pricing-inner {
+            border: 1px solid #ececec;
+            @include transition(all 200ms ease-in-out);
+			.zo-pricing-header {
+				border-bottom: 1px solid #ececec;
+				background: #f8f7f7;
+				padding: 30px;
+				text-align: center;
+				.btn-pricing {
+					font-size: 16px;
+					font-weight: bold;
+				}
+			}
+            .zo-pricing-meta {
+				padding: 20px 20px 0;
+                ul {
+                   list-style: none;
+				   padding-left: 0;
+				   li {
+						&:not(:last-child) {
+							border-bottom: 1px solid #e5e5e5;
+						}
+						margin-bottom: 15px;
+						padding-bottom: 15px;
+						strong {
+							font-weight: normal;
+						}
+						span {
+							float: right;
+							color: $primary_color;
+						}
+				   }
+                }
+            }
+			.zo-pricing-title {
+				font-size: 30px;
+				color: $primary_color;
+			}
+            .zo-pricing-price {
+                margin-bottom: 10px;
+                .price {
+                    font-size: 50px;
+					line-height: 70px;
+					color: #141414;
+                }
+                .time {
+                    float: right;
+					line-height: 70px;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   [End] 9. Pricing
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 10. Zo Grid
+========================================================================== */
+.zo-filter-category {
+	text-align: center;
+	margin-bottom: 20px;
+	li a {
+		color: #171717;
+		background-color: #fff;
+		border: 1px solid #e9e8e8;
+		display: inline-block;
+		font-size: 13px;
+		margin: 0 20px 30px 0;
+		padding: 4px 10px;
+		@include border-radius(2px);
+		&:hover, &:focus, &.active {
+			border-color: $primary_color;
+			background-color: $primary_color;
+			color: #fff;
+		}
+	}
+	li:last-child a {
+		margin-right: 0;
+	}
+}
+
+.zo-grid-wrapper {
+	position: relative;
+	.zo-grid-item-wrap {
+		background-color: #fff;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+		-webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+		@include border-radius(2px);
+		&:hover{
+			.zo-grid-media .zo-grid-overlay {
+				left: 0;
+			}
+		}
+		.zo-grid-media {
+			position: relative;
+			overflow: hidden;
+			img {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.zo-grid-overlay {
+				position: absolute;
+				left: -100%;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: $primary_color;
+				opacity: 0.9;
+				@include transition(left 0.3s ease);
+				a {
+					color: #fff;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					background: #171717;
+					opacity: 0.8;
+					text-align: center;
+					height: 34px;
+					width: 34px;
+					line-height: 34px;
+					font-size: 14px;
+					@include border-radius(2px);
+					@include transform(translate(-50%,-50%));
+					&:hover {
+						opacity: 0.9;
+						i {
+							@include animation(0.3s ease toTopFromBottom);
+						}
+					}
+					&.zo-grid-link {
+						left: calc(50% - 22px);
+					}
+					&.zo-grid-zoom {
+						left: calc(50% + 22px);
+					}
+				}
+			}
+		}
+		.zo-grid-detail {
+			padding: 20px;
+			i {
+				background: $primary_color;
+				color: #fff;
+				float: left;
+				font-size: 14px;
+				height: 34px;
+				line-height: 34px;
+				margin-right: 20px;
+				text-align: center;
+				width: 34px;
+				@include border-radius(2px);
+			}
+			.zo-grid-meta {
+				margin-left: 54px;
+				.zo-grid-title{
+					margin-bottom: 10px;
+					a {
+						color: #171717;
+						font-size: 15px;
+						line-height: 18px;
+						font-weight: bold;
+						&:hover {
+							color: $primary_color;
+						}
+					}
+				}
+				.zo-grid-categories a {
+					color: #acacac;
+					font-size: 12px;
+					&:hover {
+						color: #171717;
+					}
+				}
+			}
+		}
+	}
+	&.template-zo_grid--team {
+		text-align: center;
+		.zo-grid-item{
+			margin-bottom: 30px;
+			&:hover {
+				.zo-grid-media .zo-grid-overlay {
+					left: 0;
+				}
+			}
+			.zo-grid-media {
+				position: relative;
+				overflow: hidden;
+				margin-bottom: 20px;
+				img {
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.zo-grid-overlay {
+					position: absolute;
+					left: -100%;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background: $primary_color;
+					opacity: 0.9;
+					@include transition(left 0.3s ease);
+					.socials {
+						position: absolute;
+						text-align: center;
+						top: 50%;
+						left: 50%;
+						width: 100%;
+						@include transform(translate(-50%,-50%));
+						li{
+							&:nth-child(1) a:hover {
+								background: #5d82d1;
+							}
+							&:nth-child(2) a:hover {
+								background: #40bff5;
+							}
+							&:nth-child(3) a:hover {
+								background: #eb5e4c;
+							}
+							&:nth-child(4) a:hover {
+								background: #238cc8;
+							}
+						}
+					}
+					a {
+						display: inline-block;
+						color: #fff;
+						background: #171717;
+						opacity: 0.8;
+						height: 34px;
+						width: 34px;
+						line-height: 34px;
+						font-size: 14px;
+						@include border-radius(2px);
+						&:hover {
+							opacity: 0.9;
+							i {
+								@include animation(0.3s ease toTopFromBottom);
+							}
+						}
+					}
+				}
+			}
+			.zo-grid-title {
+				font-size: 18px;
+				line-height: 22px;
+				margin-bottom: 15px;
+				font-weight: bold;
+				a {
+					color: $primary_color;
+				}
+			}
+			.zo-grid-position a {
+				color: #5c5c5c;
+				display: inline-block;
+				font-size: 14px;
+				font-style: italic;
+				margin-bottom: 15px;
+				&:hover { color: $primary_color; }
+			}
+		}
+	}
+	&.template-zo_grid--portfolio-style-2 {
+		.zo-grid-item {
+			margin-bottom: 30px;
+			.zo-grid-item-wrap {
+				margin-bottom: 0;
+				.zo-grid-overlay {
+					padding: 20px;
+					a {
+						position: static;
+						display: inline-block;
+						@include transform(translate(0));
+					}
+					.zo-grid-title a {
+						background: transparent;
+						color: #171717;
+						font-size: 18px;
+						line-height: 22px;
+						margin-bottom: 20px;
+						font-weight: bold;
+						width: initial;
+						height: initial;
+						&:hover {
+							color: #fff;
+						}
+					}
+					.zo-grid-content {
+						color: #fff;
+						line-height: 22px;
+						margin: 0 0 20px;
+					}
+					.zo-grid-btn {
+						bottom: 20px;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	.pagination {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
+/* ==========================================================================
+   [End] 10. Zo Grid
+========================================================================== */
+
+/* ==========================================================================
+   [Start] 11. Zo Masonry
+========================================================================== */
+.zo-masonry-wrapper {
+    .zo-masonry-filter {
+        margin-bottom: 40px;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none inside;
+            text-align: center;
+            li {
+                display: inline-block;
+                margin-right: 5px;
+                margin-top: 5px;
+                a {
+                    display: block;
+                    font-size: 10px;
+                    padding: 5px 25px;
+                    border: 1px solid #DEDEDE;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    &.active, &:hover {
+                        border-color: $primary_color;
+                    }
+                }
+            }
+        }
+    }
+	.zo-masonry-item {
+		position: relative;
+		overflow: hidden;
+		.zo-masonry-overlay {
+			padding: 20px;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			position: absolute;
+			top: 0;
+			@include transition(left 0.3s ease 0s);
+			@include background-opacity($primary_color, 0.9);
+		}
+		.zo-masonry-title a {
+			color: #171717;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+		.zo-masonry-content {
+			color: #fff;
+			line-height: 22px;
+			margin: 0 0 20px;
+		}
+		.zo-masonry-btn {
+			position: absolute;
+			bottom: 20px;
+			a {
+				display: inline-block;
+				color: #fff;
+				background: #171717;
+				opacity: 0.8;
+				text-align: center;
+				height: 34px;
+				width: 34px;
+				line-height: 34px;
+				font-size: 14px;
+				@include border-radius(2px);
+				&:hover {
+					opacity: 0.9;
+					i {
+						@include animation(0.3s ease toTopFromBottom);
+					}
+				}
+				+ a {
+					margin-left: 5px;
+				}
+			}
+		}
+		&:hover {
+			.zo-masonry-overlay { 
+				left: 0;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   [End] 11. Zo Masonry
+========================================================================== */
+
+
+/* ==========================================================================
+   [Start] 12. Heading & Features
+========================================================================== */
+.zo-heading-wraper:not(.template-zo_heading--normal) {
+	.zo-heading-main {
+		position: relative;
+		color: $primary_color;
+		font-weight: bold;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		&:before {
+			background-color: #acacac;
+			bottom: 0;
+			content: "";
+			display: inline-block;
+			height: 1px;
+			left: 50%;
+			margin-left: -135px;
+			position: absolute;
+			width: 270px;
+		}
+		&:after {
+			background-color: #171717;
+			bottom: -1px;
+			content: "";
+			display: inline-block;
+			height: 4px;
+			left: 50%;
+			margin-left: -15px;
+			position: absolute;
+			width: 30px;
+		}
+	}
+	.zo-heading-sub {
+		color: #5c5c5c;
+		line-height: 22px;
+		margin-bottom: 30px;
+	}
+	&.style-light {
+		.zo-heading-main {
+			&:before {
+				background-color: #fff;
+			}
+			&:after {
+				background-color: $primary_color;
+			}
+		}
+		.zo-heading-sub {
+			color: #bababa;
+		}
+		&.extra-color {
+			.zo-heading-main {
+				&:after {
+					background-color: #171717;
+				}
+			}
+		}
+	}
+	&.style-left .zo-heading-main {
+		&:before {
+			content: "";
+			height: 1px;
+			width: 100%;
+			background-color: #acacac;
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			margin-left: 0;
+		}
+		&:after {
+			content: "";
+			height: 4px;
+			width: 30px;
+			background-color: #171717;
+			display: inline-block;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			margin-left: 0;
+		}
+	}
+	&.heading-3 .zo-heading-main {
+		&:before {
+			position: absolute;
+			background-color: #5c5c5c;
+			bottom: -1px;
+			content: "";
+			height: 4px;
+			left: 0; 
+			width: 30px;
+		}
+	}
+}
+/* ==========================================================================
+   [End] 12. Heading & Features
+========================================================================== */
+
+
+/* Zo Grid remove width, padding container */
+.vc_row [class*="template-zo_grid"].container {
+	padding: 0;
+	width: 100%;
+}
+
+/* Shortcode Ori Count Down */
+.ori-count-down {
+	> span {
+		display: none;
+	}
+	.ori-count-down-wrap {
+		background: #171717;
+		padding: 35px;
+		border: solid 1px $primary_color;
+		.ori-count-down-number {
+			color: $primary_color;
+			font-size: 35px;
+			font-weight: bold;
+			margin-right: 30px;
+		}
+		.ori-count-down-label {
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		> div {
+			display: inline-block;
+		}
+	}
+}
+
+
+.zo-video-play-wrapper{
+    .play-button{
+        position: relative;
+        .zo-video-content{
+            position: absolute;
+            width: 50px;
+            height: 40px;
+            background: rgba(0,0,0,0.3);
+            left: calc(50% - 25px);
+            top: -20px;
+            border-radius: 2px;
+            @include transition(all 0.5s ease);
+            &:hover{
+                background: rgba(0,0,0,0.5);
+            }
+            &:before{
+                position: absolute;
+                content: '\f04b';
+                font-family: 'FontAwesome';
+                font-size: 25px;
+                color: $primary-color;
+                left: 15px;
+                top: 10px;
+            }
+        }
+    }
+}
+
+/*
+ *		Particles
+ */
+.zo-particles {
+	position: relative;
+	.zo-particles-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%,-50%));
+		color: #fff;
+		font-size: 50px;
+		line-height: 1;
+		font-weight: bold;
+	}
+}

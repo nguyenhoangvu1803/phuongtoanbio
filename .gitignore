@@ -1,0 +1,11 @@
+.idea
+.htaccess
+nbproject
+wp-content/themes/ori/assets/css/static.css
+wp-content/themes/ori/assets/css/presets-*.css
+wp-content/themes/ori/assets/scss/options.scss
+wp-config.php
+error_log
+wp-content/plugins/wp-super-cache
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
