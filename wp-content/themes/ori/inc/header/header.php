@@ -30,23 +30,6 @@ $top_bar_show = !empty($zo_meta->_zo_top_bar_show) ? $zo_meta->_zo_top_bar_show:
 									if($value){ ?>
 										<div class="col-lg-6 col-md-6 col-sm-6 hidden-xs <?php if($left) echo 'align-right'; else echo 'align-left';?>">
 											<div class="top-bar-infomation">
-												<?php 
-													if(!empty($smof_data['tbar_languages']) && $smof_data['tbar_languages']){
-												?>
-													<div class="infomation-languages">
-														<ul>
-															<?php 
-																$args = array(
-																	'show_names' => 0,
-																	'show_flags' => 1,
-																);
-																pll_the_languages($args);
-															?>
-														</ul>
-													</div>
-												<?php 
-													}
-												?>
 												<div class="infomation-content"><?php if(!empty($smof_data['tbar_infomation'])) print($smof_data['tbar_infomation']);?></div>
 											</div>
 										</div>

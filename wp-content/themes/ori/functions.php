@@ -91,9 +91,6 @@ require( get_template_directory() . '/inc/widgets/recent-posts-widget-with-thumb
 require( get_template_directory() . '/inc/widgets/flickr-badges-widget.php' );
 require( get_template_directory() . '/inc/widgets/tweets.php' );
 
-/* Add Selector */
-require( get_template_directory() . '/inc/selector/selector.php' );
-
 // Set up the content width value based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
 	$content_width = 625;

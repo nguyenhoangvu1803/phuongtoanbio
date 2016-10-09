@@ -20,10 +20,6 @@
 </head>
 <body <?php body_class(); ?>>
 <?php zo_get_page_loading(); ?>
-<?php 
-	$selector = zo_get_data_theme_options('enable_selector');
-	if($selector) zo_presets_selector(); 
-?>
 <div id="page">
 	<header id="masthead" class="site-header">
 		<?php zo_header(); ?>
