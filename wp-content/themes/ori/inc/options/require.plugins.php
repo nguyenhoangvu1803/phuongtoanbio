@@ -31,11 +31,6 @@ function zo_theme_register_required_plugins() {
             'required' 			=> true,
         ),
         array(
-            'name' 				=> 'Polylang WPML',
-            'slug' 				=> 'polylang',
-            'required' 			=> true,
-        ),
-        array(
             'name'               => 'CMS Theme',
             'slug'               => 'cmstheme',
             'source'             => $root .'cmstheme.v3.zip',
@@ -61,11 +56,6 @@ function zo_theme_register_required_plugins() {
         array(
             'name'               => 'Yoast SEO',
             'slug'               => 'wordpress-seo',
-            'required'           => true,
-        ),
-        array(
-            'name'               => 'Contact Form 7',
-            'slug'               => 'contact-form-7',
             'required'           => true,
         )
     );
