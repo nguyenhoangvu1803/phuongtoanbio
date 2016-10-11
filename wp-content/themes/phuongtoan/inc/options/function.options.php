@@ -229,17 +229,6 @@ $this->sections[] = array(
                 '' => get_template_directory_uri().'/inc/options/images/header/h-default.png',
             )
         ),
-        array(
-            'title'       => esc_html__( 'Height', 'ori' ),
-            'subtitle' => esc_html__( 'Controls the height for main header.', 'ori' ),
-            'id'          => 'mheader_height',
-            'type'        => 'slider',
-            "default"   => 120,
-            "min"       => 30,
-            "step"      => 1,
-            "max"       => 300,
-            'display_value' => 'label'
-        ),
 		array(
 			'id' => 'mheader_position',
 			'title' => 'Position',
@@ -295,6 +284,16 @@ $this->sections[] = array(
             'default' => array(
                 'url'=>get_template_directory_uri().'/logo.jpg'
             )
+        ),
+        array(
+            'title'       => esc_html__( 'Chiều cao logo', 'ori' ),
+            'id'          => 'mheader_height',
+            'type'        => 'slider',
+            "default"   => 120,
+            "min"       => 30,
+            "step"      => 1,
+            "max"       => 300,
+            'display_value' => 'label'
         ),
         array(
             'title' => __('Tên Công Ty', 'ori'),

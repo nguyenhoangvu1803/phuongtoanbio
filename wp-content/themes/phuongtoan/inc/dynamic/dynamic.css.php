@@ -117,7 +117,7 @@ class ZoTheme_DynamicCss
 			$mheader_height = !empty($smof_data['mheader_height']) ? $smof_data['mheader_height'] : '';
 			$mheader_height = !empty($zo_meta->_zo_mheader_height) ? $zo_meta->_zo_mheader_height : $mheader_height;
 			if($mheader_height) {
-				echo '#zo-header-logo a, .nav-menu > li > a {
+				echo '#zo-header-logo a {
 					line-height: '. esc_attr($mheader_height) .'px;
 				}';
 				echo '#zo-header-logo a img {
