@@ -335,7 +335,7 @@ $this->sections[] = array(
                 'font-size' => '16px',
 				'text-align' => 'center',
 				'text-transform' => 'uppercase',
-				'line-height' => '40px'
+				'line-height' => '50px'
             )
         ),
         array(
