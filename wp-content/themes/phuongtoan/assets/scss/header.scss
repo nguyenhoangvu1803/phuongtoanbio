@@ -40,10 +40,7 @@
 	span {
 		padding-left: 10px;
 		font-size: 12px;
-		display: inline-block;
-		@include breakpoint-max(768px) {
-			display: block;
-		}
+		display: block;
 	}
 	a {
 		display: inline-block;
@@ -64,6 +61,10 @@
 	#zo-header-logo .main-logo{
 		display: none;
 	}
+}
+
+.company-info {
+	float: right;
 }
 
 /* Admin Bar */
