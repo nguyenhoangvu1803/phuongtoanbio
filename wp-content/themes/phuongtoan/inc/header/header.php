@@ -78,8 +78,8 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 							?>
 						</nav>
 					</div>
+					<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="fa fa-bars"></i></div>
 				</div>
-				<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="fa fa-bars"></i></div>
 			</div>
 		</div>
 	</div>
