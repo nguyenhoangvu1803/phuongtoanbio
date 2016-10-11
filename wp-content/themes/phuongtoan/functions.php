@@ -346,16 +346,6 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-    	'name' => __( 'Menu Right', 'ori' ),
-    	'id' => 'sidebar-4',
-    	'description' => __( 'Appears when using the optional Menu with a page set as Menu right', 'ori' ),
-    	'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    	'after_widget' => '</aside>',
-    	'before_title' => '<h3 class="wg-title">',
-    	'after_title' => '</h3>',
-	) );
-	
-	register_sidebar( array(
     	'name' => __( 'Footer Top 1', 'ori' ),
     	'id' => 'sidebar-5',
     	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 1', 'ori' ),

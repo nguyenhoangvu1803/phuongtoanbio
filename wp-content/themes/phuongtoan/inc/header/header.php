@@ -33,7 +33,7 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 						?>
 					</span>
 				</div>
-				<div class="zo-header-navigation-wrap pull-right">
+				<div class="zo-header-navigation-wrap">
 					<div class="zo-header-navigation">
 						<nav id="site-navigation" class="main-navigation">
 							<?php
@@ -63,9 +63,6 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 								wp_nav_menu($attr); 
 							?>
 						</nav>
-					</div>
-					<div class="zo-header-right">
-						<?php dynamic_sidebar('sidebar-4'); ?>
 					</div>
 				</div>
 				<div id="zo-menu-mobile" class="collapse navbar-collapse"><i class="fa fa-bars"></i></div>
