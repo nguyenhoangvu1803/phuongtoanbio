@@ -333,7 +333,8 @@ $this->sections[] = array(
             'default' => array(
 				'font-family' => 'Open Sans',
 				'font-weight' => 400,
-                'font-size' => '14px'
+                'font-size' => '14px',
+				'text-align' => 'center';
             )
         ),
         array(
