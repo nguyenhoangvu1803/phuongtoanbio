@@ -301,7 +301,7 @@ $this->sections[] = array(
             'id' => 'company_name',
             'type' => 'text',
             'default' => 'PHƯƠNG TOÀN - DOANH NGHIỆP TƯ NHÂN SINH HÓA'
-        )
+        ),
         array(
             'title' => __('Sologan', 'ori'),
             'id' => 'text_logo',
