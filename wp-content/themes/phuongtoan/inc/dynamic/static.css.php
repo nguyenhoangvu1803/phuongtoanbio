@@ -160,6 +160,11 @@ class ZoTheme_StaticCss
 					if(!empty($smof_data['menu_fsize_flevel']['letter-spacing']))
 						echo 'letter-spacing: '. esc_attr($smof_data['menu_fsize_flevel']['letter-spacing']) .';';
 				echo '}';
+				if(!empty($smof_data['menu_fsize_flevel']['line-height'])){
+					echo '.nav-menu > li > a {
+						line-height: '. esc_attr($smof_data['menu_fsize_flevel']['line-height']) .';
+					}';
+				}
 				if(!empty($smof_data['menu_fsize_flevel']['text-align'])){
 					echo '.nav-menu, .nav-menu > li {
 						text-align: '. esc_attr($smof_data['menu_fsize_flevel']['text-align']) .';

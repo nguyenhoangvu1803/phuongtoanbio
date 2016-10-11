@@ -324,7 +324,7 @@ $this->sections[] = array(
             'font-backup' => false,
             'all_styles' => false,
             'color' => false,
-            'line-height' => false,
+            'line-height' => true,
             'text-align' => true,
 			'letter-spacing' => true,
 			'text-transform' => true,
@@ -334,7 +334,8 @@ $this->sections[] = array(
 				'font-weight' => 400,
                 'font-size' => '16px',
 				'text-align' => 'center',
-				'text-transform' => 'uppercase'
+				'text-transform' => 'uppercase',
+				'line-height' => '40px'
             )
         ),
         array(
