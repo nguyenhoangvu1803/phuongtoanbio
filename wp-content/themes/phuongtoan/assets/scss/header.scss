@@ -64,10 +64,16 @@
 .company-info {
 	float: right;
 	text-align: right;
-	margin-top: 30px;
+	margin-top: 35px;
 	.company-name {
 		color: $primary_color;
 		font-size: 30px;
+		line-height: 30px;
+	}
+	.company-sologan {
+		text-align: center;
+		font-size: 16px;
+		line-height: 30px;
 	}
 }
 
