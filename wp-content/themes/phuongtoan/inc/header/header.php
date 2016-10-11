@@ -25,13 +25,21 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 						<img class="main-logo" alt="<?php echo get_bloginfo ('name');?>" src="<?php echo esc_url(zo_page_header_logo()); ?>">
 						<?php echo zo_page_header_sticky_logo(); ?>
 					</a>
-					<span>
-						<?php 
-							$slogan = !empty($smof_data['text_logo']) ? $smof_data['text_logo']: '';
-							$slogan = !empty($zo_meta->_zo_header_logo_slogan) ? $zo_meta->_zo_header_logo_slogan: $slogan;
-							echo esc_attr($slogan);
-						?>
-					</span>
+					<div class="company-info">
+						<span class="company-name">
+							<?php 
+								$company_name = !empty($smof_data['company_name']) ? $smof_data['company_name']: 'PHƯƠNG TOÀN - DOANH NGHIỆP TƯ NHÂN SINH HÓA';
+								echo esc_attr($company_name);
+							?>
+						</span>
+						<span class="company-sologan">
+							<?php 
+								$slogan = !empty($smof_data['text_logo']) ? $smof_data['text_logo']: '';
+								$slogan = !empty($zo_meta->_zo_header_logo_slogan) ? $zo_meta->_zo_header_logo_slogan: $slogan;
+								echo esc_attr($slogan);
+							?>
+						</span>
+					</div>
 				</div>
 				<div class="zo-header-navigation-wrap">
 					<div class="zo-header-navigation">

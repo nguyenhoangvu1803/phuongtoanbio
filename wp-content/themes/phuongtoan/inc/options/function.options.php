@@ -297,10 +297,16 @@ $this->sections[] = array(
             )
         ),
         array(
-            'title' => __('Text for logo', 'ori'),
+            'title' => __('Tên Công Ty', 'ori'),
+            'id' => 'company_name',
+            'type' => 'text',
+            'default' => 'PHƯƠNG TOÀN - DOANH NGHIỆP TƯ NHÂN SINH HÓA'
+        )
+        array(
+            'title' => __('Sologan', 'ori'),
             'id' => 'text_logo',
             'type' => 'text',
-            'default' => 'Business Wordpress Theme'
+            'default' => 'Men Vi Sinh Xử Lý Chất Thải'
         )
 	)
 );
