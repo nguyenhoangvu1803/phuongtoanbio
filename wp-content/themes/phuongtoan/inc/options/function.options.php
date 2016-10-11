@@ -419,7 +419,7 @@ $this->sections[] = array(
             'type' => 'media',
             'url' => true,
             'default' => array(
-                'url'=>get_template_directory_uri().'/logo.png'
+                'url'=>get_template_directory_uri().'/logo.jpg'
             )
         ),
         array(
