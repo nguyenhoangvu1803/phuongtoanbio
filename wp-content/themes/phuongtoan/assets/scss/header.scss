@@ -38,8 +38,6 @@
 		@include transition(all 500ms ease 0ms);
 	}
 	span {
-		padding-left: 10px;
-		font-size: 12px;
 		display: block;
 	}
 	a {
@@ -66,6 +64,11 @@
 .company-info {
 	float: right;
 	text-align: right;
+	margin-top: 30px;
+	.company-name {
+		color: $primary_color;
+		font-size: 30px;
+	}
 }
 
 /* Admin Bar */
