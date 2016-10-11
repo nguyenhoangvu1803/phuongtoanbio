@@ -41,7 +41,13 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 						</span>
 					</div>
 				</div>
-				<div class="zo-header-navigation-wrap">
+			</div>
+		</div>
+	</div>
+	<div class="zo-header-navigation-wrap">
+		<div class="<?php echo esc_attr($container);?>">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="zo-header-navigation">
 						<nav id="site-navigation" class="main-navigation">
 							<?php
