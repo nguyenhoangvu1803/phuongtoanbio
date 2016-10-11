@@ -760,7 +760,7 @@ $this->sections[] = array(
             'type' => 'media',
             'url' => true,
             'default' => array(
-                'url'=>get_template_directory_uri().'/logo.png'
+                'url'=>get_template_directory_uri().'/logo.jpg'
             ),
             'required' => array( 0 => 'menu_sticky', 1 => '=', 2 => 1 )
         ),
