@@ -182,7 +182,6 @@ class ZoTheme_StaticCss
 					if(!empty($smof_data['menu_padding_first_level']['padding-left'])) 
 						echo 'padding-left: '. esc_attr($smof_data['menu_padding_first_level']['padding-left']) .';';
 				echo '}';
-				echo '.nav-menu > li:last-child { padding-right: 0; }';
 			}
 			if(!empty($smof_data['menu_margin_first_level'])) {
 				echo '.nav-menu > li {';

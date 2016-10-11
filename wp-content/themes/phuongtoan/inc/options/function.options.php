@@ -346,9 +346,9 @@ $this->sections[] = array(
             'mode' => 'padding',
             'default' => array(
                 'padding-top'     => '0',
-                'padding-right'   => '10px',
+                'padding-right'   => '30px',
                 'padding-bottom'  => '0',
-                'padding-left'    => '10px',
+                'padding-left'    => '30px',
                 'units'          => 'px',
             )
         ),
