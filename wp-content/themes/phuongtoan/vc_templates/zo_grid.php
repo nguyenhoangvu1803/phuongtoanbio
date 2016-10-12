@@ -52,11 +52,6 @@
 	
     <div class="row zo-grid <?php echo esc_attr($atts['grid_class']);?>">
         <?php
-		
-		echo "<pre>";
-			print_r($atts);
-		echo "</pre>";
-		
         $posts = $atts['posts'];
         $size = ( isset($atts['layout']) && $atts['layout']=='basic')?'thumbnail':'medium';
         while($posts->have_posts()){
