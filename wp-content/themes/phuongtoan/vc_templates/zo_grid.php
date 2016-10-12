@@ -1,16 +1,16 @@
 <?php 
     /* get categories */
-        $taxo = 'category';
-        $_category = array();
-        if(!isset($atts['cat']) || $atts['cat']==''){
-            $terms = get_terms($taxo);
-            foreach ($terms as $cat){
-                $_category[] = $cat->term_id;
-            }
-        } else {
-            $_category  = explode(',', $atts['cat']);
-        }
-        $atts['categories'] = $_category;
+	$taxo = 'chuyen_muc_san_pham';
+	$_category = array();
+	if(!isset($atts['cat']) || $atts['cat']==''){
+		$terms = get_terms($taxo);
+		foreach ($terms as $cat){
+			$_category[] = $cat->term_id;
+		}
+	} else {
+		$_category  = explode(',', $atts['cat']);
+	}
+	$atts['categories'] = $_category;
 ?>
 <div class="zo-grid-wrapper <?php echo esc_attr($atts['template']);?>" id="<?php echo esc_attr($atts['html_id']);?>">
 
@@ -52,6 +52,11 @@
 	
     <div class="row zo-grid <?php echo esc_attr($atts['grid_class']);?>">
         <?php
+		
+		echo "<pre>";
+			print_r($atts);
+		echo "</pre>";
+		
         $posts = $atts['posts'];
         $size = ( isset($atts['layout']) && $atts['layout']=='basic')?'thumbnail':'medium';
         while($posts->have_posts()){
@@ -77,11 +82,11 @@
 					?>	
 				</div>
                 <?php echo '<' . $atts['title_element'] . ' class="zo-grid-title">';?><?php the_title();?><?php echo '</' . $atts['title_element'] .'>';?>
-                <div class="zo-grid-time">
-                    <?php the_time('l, F jS, Y');?>
-                </div>
-                <div class="zo-grid-categories">
-                    <?php echo get_the_term_list( get_the_ID(), $taxo, 'Category: ', ', ', '' ); ?>
+                <div class="zo-grid-content">
+                    <?php 
+						$content = get_the_content();
+						echo $content;
+					?>
                 </div>
             </div>
             <?php
