@@ -67,7 +67,7 @@
                 $groups[] = '"category-'.$category->slug.'"';
             }
             ?>
-            <div class="zo-grid-item <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
+            <div class="zo-grid-item align-center <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
 				<div class="zo-grid-media">
 					<?php
 						if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
@@ -85,7 +85,7 @@
                 <div class="zo-grid-content">
                     <?php 
 						$content = get_the_content();
-						echo $content;
+						echo zo_limit_words($content, $atts['num_words'])
 					?>
                 </div>
             </div>
