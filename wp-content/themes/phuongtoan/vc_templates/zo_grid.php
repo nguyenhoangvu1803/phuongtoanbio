@@ -64,19 +64,25 @@
             ?>
             <div class="zo-grid-item align-center <?php echo esc_attr($atts['item_class']);?>" data-groups='[<?php echo implode(',', $groups);?>]'>
 				<div class="zo-grid-media">
-					<?php
-						if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
-							if($atts['image_size']=='custom'){
-								echo zo_post_thumbnail(get_the_ID(),$atts['image_width'],$atts['image_height'],true,true,true);
-							}else{
-								the_post_thumbnail($atts['image_size']);
-							}
-						else:
-							echo '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" style="max-height: '. esc_attr($atts['image_height']) .'px;" />';
-						endif;
-					?>	
+					<a href="<?php the_permalink();?>" title="<?php the_title();?>">
+						<?php
+							if (has_post_thumbnail() && !post_password_required() && !is_attachment() && wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full', false)):
+								if($atts['image_size']=='custom'){
+									echo zo_post_thumbnail(get_the_ID(),$atts['image_width'],$atts['image_height'],true,true,true);
+								}else{
+									the_post_thumbnail($atts['image_size']);
+								}
+							else:
+								echo '<img src="' . ZO_IMAGES . 'no-image.jpg" alt="' . get_the_title() . '" style="max-height: '. esc_attr($atts['image_height']) .'px;" />';
+							endif;
+						?>	
+					</a>
 				</div>
-                <?php echo '<' . $atts['title_element'] . ' class="zo-grid-title">';?><?php the_title();?><?php echo '</' . $atts['title_element'] .'>';?>
+                <?php echo '<' . $atts['title_element'] . ' class="zo-grid-title">';?>
+					<a href="<?php the_permalink();?>" title="<?php the_title();?>">
+						<?php the_title();?>
+					</a>
+				<?php echo '</' . $atts['title_element'] .'>';?>
                 <div class="zo-grid-content">
                     <?php 
 						$content = get_the_content();
