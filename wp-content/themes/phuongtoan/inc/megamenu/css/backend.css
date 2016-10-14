@@ -65,3 +65,11 @@
 .description_width_100 label select{
 	width: 100%;
 }
+.menu-item-settings {
+	float: left;
+	margin-bottom: 8px;
+}
+.menu-settings {
+	width: 100%;
+	display: inline-block;
+}
