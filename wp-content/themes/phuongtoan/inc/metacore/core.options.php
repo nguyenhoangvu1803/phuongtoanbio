@@ -632,7 +632,7 @@ class ZoCoreControl
 		}
 		/* update _zo_meta_data. */
         if(!empty($zo_meta)){
-		    update_post_meta($post_id, '_zo_meta_data', str_replace("\\\'","\\'",json_encode($zo_meta)));
+		    update_post_meta($post_id, '_zo_meta_data', str_replace("\\\'","\\'",json_encode($zo_meta, JSON_UNESCAPED_UNICODE)));
 		}
 	}
 }
