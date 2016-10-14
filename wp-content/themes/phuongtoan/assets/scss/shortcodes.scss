@@ -1239,7 +1239,9 @@
 		.zo-grid-media {
 			overflow: hidden;
 			margin-bottom: 18px;
-			@include border-radius(15px);
+			img {
+				@include border-radius(15px);
+			}
 		}
 	}
 	.zo-grid-title {
