@@ -49,7 +49,7 @@ $atts['categories'] = $_category;
 				</div>
 				<div class="zo-carousel-content">
 					<?php echo zo_limit_words(get_the_excerpt(), 20);?>
-					<a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php esc_html_e('Read More', 'ori');?></a>
+					<a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php esc_html_e('Xem Tiếp', 'ori');?></a>
 				</div>
 				<div class="zo-carousel-meta">
 					<div class="author vcard"><i class="fa fa-user"></i><?php esc_html_e('Author: ', 'ori'); ?><?php the_author_posts_link(); ?></div>
