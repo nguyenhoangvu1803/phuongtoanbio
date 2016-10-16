@@ -62,7 +62,7 @@ if ( post_password_required() ) {
         'title_reply'       => wp_kses(__( '<span>Ghi bình luận</span>','ori'), $allowed_html),
         'title_reply_to'    => esc_html__( 'Gởi Bình Luận %s','ori'),
         'cancel_reply_link' => esc_html__( 'Cancel','ori'),
-        'label_submit'      => esc_html__( 'Viết bình luận','ori'),
+        'label_submit'      => esc_html__( 'Bình luận','ori'),
         'class_submit'  => 'btn btn-primary',
         'comment_notes_before' => '',
         'fields' => apply_filters( 'comment_form_default_fields', array(
