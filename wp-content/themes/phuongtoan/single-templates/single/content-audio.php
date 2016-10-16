@@ -32,7 +32,6 @@
     <div class="zo-blog-detail">
         <div class="zo-blog-meta">
 			<h2 class="zo-blog-title"><?php the_title(); ?></h2>
-			<?php zo_archive_detail(); ?>
 		</div>
         <div class="zo-blog-content">
             <?php
