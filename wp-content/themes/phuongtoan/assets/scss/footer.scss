@@ -173,6 +173,12 @@ footer {
 	.footer-first p {
 		margin-bottom: 20px;
 	}
+	.widget_nav_menu ul li {
+		display: block;
+		+ li {
+			margin-left: 0;
+		}
+	}
 }
 
 #zo-footer-bottom {
