@@ -253,24 +253,6 @@ function zo_get_post_like(){
 }
 
 /**
- * Archive detail
- *
- * @author ZoTheme
- * @since 1.0.0
- */
-function zo_archive_detail(){
-    ?>
-    <ul>
-		<li class="author vcard"><i class="fa fa-user"></i><?php esc_html_e('Author: ', 'ori'); ?><?php the_author_posts_link(); ?></li>
-        <li class="zo-blog-comment"><i class="fa fa-comments"></i><a href="<?php the_permalink(); ?>"><?php esc_html_e('Comments: ', 'ori'); ?><?php echo comments_number('0','1','%'); ?></a></li>
-        <?php if(has_category()): ?>
-            <li class="zo-blog-category"><?php the_terms( get_the_ID(), 'category', '<i class="fa fa-folder-open"></i><span>' . esc_html__('Category: ', 'ori') . '</span>', ' / ' ); ?></li>
-        <?php endif; ?>
-    </ul> 
-<?php
-}
-
-/**
  * About Author
  *
  * @author ZoTheme

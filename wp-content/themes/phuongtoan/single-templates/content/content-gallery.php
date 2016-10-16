@@ -52,7 +52,6 @@ global $smof_data;
 						case 'meta':
 							?>
 								<div class="zo-blog-meta">
-									<?php zo_archive_detail(); ?>
 									<a class="btn btn-readmore" title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php _e('Xem Tiếp ', 'ori') ?></a>
 								</div>
 							<?php
