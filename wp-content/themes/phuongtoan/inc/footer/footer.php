@@ -90,14 +90,14 @@ $ft_social = zo_get_data_theme_options('ft_social');
 									case 'footer_bottom_1':
 										?>
 											 <?php if (is_active_sidebar('sidebar-9')) : ?>
-												 <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6 bottom-first <?php if($i == 2) echo "align-right";?>"><?php dynamic_sidebar('sidebar-9'); ?></div>
+												 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-center bottom-first <?php if($i == 2) echo "align-right";?>"><?php dynamic_sidebar('sidebar-9'); ?></div>
 											 <?php endif; ?>
 										<?php
 										break;
 									case 'footer_bottom_2':
 										?>
 											 <?php if (is_active_sidebar('sidebar-10')) : ?>
-												 <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6 bottom-second <?php if($i == 2) echo "align-right";?>"><?php dynamic_sidebar('sidebar-10'); ?></div>
+												 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bottom-second <?php if($i == 2) echo "align-right";?>"><?php dynamic_sidebar('sidebar-10'); ?></div>
 											 <?php endif; ?>
 										<?php
 										break;
