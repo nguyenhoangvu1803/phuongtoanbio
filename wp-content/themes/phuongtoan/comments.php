@@ -59,10 +59,10 @@ if ( post_password_required() ) {
         'id_form'           => 'commentform',
 		'class_form'		=> $is_log_in,
         'id_submit'         => 'submit',
-        'title_reply'       => wp_kses(__( '<span>Leave Comment</span>','ori'), $allowed_html),
-        'title_reply_to'    => esc_html__( 'Post to Reply %s','ori'),
-        'cancel_reply_link' => esc_html__( 'Cancel Reply','ori'),
-        'label_submit'      => esc_html__( 'Add Comment','ori'),
+        'title_reply'       => wp_kses(__( '<span>Ghi bình luận</span>','ori'), $allowed_html),
+        'title_reply_to'    => esc_html__( 'Gởi Bình Luận %s','ori'),
+        'cancel_reply_link' => esc_html__( 'Cancel','ori'),
+        'label_submit'      => esc_html__( 'Viết bình luận','ori'),
         'class_submit'  => 'btn btn-primary',
         'comment_notes_before' => '',
         'fields' => apply_filters( 'comment_form_default_fields', array(
@@ -72,7 +72,7 @@ if ( post_password_required() ) {
                     '<p class="comment-form-author">'.
                     '<i class="fa fa-user"></i>'.
                     '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-                    '" size="30"' . esc_attr($aria_req) . ' placeholder="'.esc_html__('Your Name','ori').'"/></p>',
+                    '" size="30"' . esc_attr($aria_req) . ' placeholder="'.esc_html__('Tên của bạn','ori').'"/></p>',
 
                 'email' =>
                     '<p class="comment-form-email">'.
@@ -88,7 +88,7 @@ if ( post_password_required() ) {
 					'</div>',
             )
         ),
-        'comment_field' =>  '<div class="comment-textarea-wrap"><p class="comment-form-comment"><i class="fa fa-comment"></i><textarea id="comment" name="comment" cols="45" rows="8" placeholder="'.esc_html__('Comment','ori').'" aria-required="true"></textarea></p></div>',
+        'comment_field' =>  '<div class="comment-textarea-wrap"><p class="comment-form-comment"><i class="fa fa-comment"></i><textarea id="comment" name="comment" cols="45" rows="8" placeholder="'.esc_html__('Bình Luận','ori').'" aria-required="true"></textarea></p></div>',
 	);
 	comment_form($args);
 	?>
