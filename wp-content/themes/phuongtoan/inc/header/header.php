@@ -35,24 +35,25 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 	</div>
 </div>
 
+<div id="zo-header-logo">
+	<div class="<?php echo esc_attr($container);?>">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">			
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<img class="main-logo" alt="<?php echo get_bloginfo ('name');?>" src="<?php echo esc_url(zo_page_header_logo()); ?>">
+					<?php echo zo_page_header_sticky_logo(); ?>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Header Navigation -->
 <div id="zo-header" class="zo-main-header header-default <?php if ($smof_data['menu_sticky_tablets']) {
 	echo 'sticky-tablets';
 } ?> <?php if ($smof_data['menu_sticky_mobile']) {
 	echo 'sticky-mobile';
 } ?>">
-	<div class="<?php echo esc_attr($container);?>">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div id="zo-header-logo">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<img class="main-logo" alt="<?php echo get_bloginfo ('name');?>" src="<?php echo esc_url(zo_page_header_logo()); ?>">
-						<?php echo zo_page_header_sticky_logo(); ?>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="zo-header-navigation-wrap">
 		<div class="<?php echo esc_attr($container);?>">
 			<div class="row">
