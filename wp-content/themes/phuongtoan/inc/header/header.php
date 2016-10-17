@@ -41,7 +41,7 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">			
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<img class="main-logo" alt="<?php echo get_bloginfo ('name');?>" src="<?php echo esc_url(zo_page_header_logo()); ?>">
-					<?php echo zo_page_header_sticky_logo(); ?>
+					<?php //echo zo_page_header_sticky_logo(); ?>
 				</a>
 			</div>
 		</div>
