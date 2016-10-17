@@ -38,13 +38,13 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 <div id="zo-header-logo">
 	<div class="<?php echo esc_attr($container);?>">
 		<div class="row">
-			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">			
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">			
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<img class="main-logo" alt="<?php echo get_bloginfo ('name');?>" src="<?php echo esc_url(zo_page_header_logo()); ?>">
 					<?php //echo zo_page_header_sticky_logo(); ?>
 				</a>
 			</div>
-			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">		
+			<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">		
 				<?php 
 					if(is_active_sidebar('header-address')) dynamic_sidebar('header-address');
 				?>
