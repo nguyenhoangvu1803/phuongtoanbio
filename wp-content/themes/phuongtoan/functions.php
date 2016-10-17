@@ -346,6 +346,15 @@ function zo_widgets_init() {
 	) );
 	
 	register_sidebar( array(
+		'name' => __( 'Header Address', 'ori' ),
+		'id' => 'header-address',
+		'before_widget' => '<aside class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="wg-title"><span>',
+		'after_title' => '</span></h3>',
+	) );
+	
+	register_sidebar( array(
     	'name' => __( 'Footer Top 1', 'ori' ),
     	'id' => 'sidebar-5',
     	'description' => __( 'Appears when using the optional Footer with a page set as Footer Top 1', 'ori' ),
