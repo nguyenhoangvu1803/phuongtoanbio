@@ -435,11 +435,11 @@
 		display: inline-block;
 		cursor: pointer;
 		text-align: left;
-		img {
+		img, i {
 			float: left;
 		}
 		.zo-content {
-			margin-left: 50px;
+			margin-left: 30px;
 			font-size: 12px;
 			.title {
 				display: block;
@@ -451,7 +451,7 @@
 			}
 		}
 		+ li {
-			margin-left: 15px;
+			margin-left: 30px;
 		}
 	}
 }
