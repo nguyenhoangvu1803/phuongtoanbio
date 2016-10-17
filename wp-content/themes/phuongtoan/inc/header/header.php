@@ -12,20 +12,26 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 ?>
 
 <div id="zo-header-top">
-	<div class="company-info">
-		<span class="company-name">
-			<?php 
-				$company_name = !empty($smof_data['company_name']) ? $smof_data['company_name']: 'PHƯƠNG TOÀN - DOANH NGHIỆP TƯ NHÂN SINH HÓA';
-				echo esc_attr($company_name);
-			?>
-		</span>
-		<span class="company-sologan">
-			<?php 
-				$slogan = !empty($smof_data['text_logo']) ? $smof_data['text_logo']: '';
-				$slogan = !empty($zo_meta->_zo_header_logo_slogan) ? $zo_meta->_zo_header_logo_slogan: $slogan;
-				echo esc_attr($slogan);
-			?>
-		</span>
+	<div class="<?php echo esc_attr($container);?>">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="company-info">
+					<span class="company-name">
+						<?php 
+							$company_name = !empty($smof_data['company_name']) ? $smof_data['company_name']: 'PHƯƠNG TOÀN - DOANH NGHIỆP TƯ NHÂN SINH HÓA';
+							echo esc_attr($company_name);
+						?>
+					</span>
+					<span class="company-sologan">
+						<?php 
+							$slogan = !empty($smof_data['text_logo']) ? $smof_data['text_logo']: '';
+							$slogan = !empty($zo_meta->_zo_header_logo_slogan) ? $zo_meta->_zo_header_logo_slogan: $slogan;
+							echo esc_attr($slogan);
+						?>
+					</span>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
