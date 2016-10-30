@@ -37,12 +37,6 @@
 			}
 		}
 	}
-	#zo-menu-mobile {
-		position: absolute;
-		right: 15px;
-		top: 50%;
-		@include transform(translateY(-50%));
-	}
 	.zo-header-navigation {
 		display: none;
 	}
