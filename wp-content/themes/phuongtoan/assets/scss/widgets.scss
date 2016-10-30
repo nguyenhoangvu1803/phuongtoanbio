@@ -430,11 +430,17 @@
 	margin: 45px 0 0;
 	padding: 0;
 	text-align: right;
+	@include breakpoint-max(992px) {
+		display: inline-block;
+	}
 	li {
 		list-style: none;
 		display: inline-block;
 		cursor: pointer;
 		text-align: left;
+		@include breakpoint-max(992px) {
+			width: calc(33.333% - 20px);
+		}
 		i {
 			float: left;
 			font-size: 30px;
