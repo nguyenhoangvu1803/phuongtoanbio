@@ -4273,7 +4273,9 @@ body .wpb_content_element, body .wpb_button {
 ========================================================================== */ }
   .zo-grid-wrapper .zo-grid-item .zo-grid-media {
     overflow: hidden;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    padding: 10px;
+    border: 1px solid #e4e4e4; }
   .zo-grid-wrapper .zo-grid-item .zo-grid-media img {
     -webkit-border-radius: 15px;
     -khtml-border-radius: 15px;
@@ -4281,10 +4283,10 @@ body .wpb_content_element, body .wpb_button {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     border-radius: 15px;
-    /* BACKGROUND GRADIENT */ }
+    /* BACKGROUND GRADIENT */
+    max-height: 180px; }
   .zo-grid-wrapper .zo-grid-title {
-    font-size: 18px;
-    letter-spacing: 0.05em;
+    font-size: 16px;
     text-transform: uppercase; }
   .zo-grid-wrapper .pagination {
     margin-top: 30px;
