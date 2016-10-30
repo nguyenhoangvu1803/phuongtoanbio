@@ -215,15 +215,9 @@
 		left: 0;
 		z-index: 99;
     }
-	#zo-header {
-		display: inline-block;
-		height: 30px;
-	}
     #zo-menu-mobile {
-        display: block;
-		position: absolute;
-		right: 15px;
-		top: 0;
+        display: inline-block;
+		float: right;
         i {
             background: $primary_color;
             color: #fff;
