@@ -442,6 +442,10 @@
 			width: calc(33.333% - 20px);
 			float: left;
 		}
+		@include breakpoint-max(768px) {
+			width: 100%;
+			margin-bottom: 15px;
+		}
 		i {
 			float: left;
 			font-size: 30px;
@@ -458,8 +462,10 @@
 				color: #b5b5b5;
 			}
 		}
-		+ li {
-			margin-left: 30px;
+		@include breakpoint-min(768px){
+			+ li {
+				margin-left: 30px;
+			}
 		}
 	}
 }
