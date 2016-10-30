@@ -440,6 +440,7 @@
 		text-align: left;
 		@include breakpoint-max(992px) {
 			width: calc(33.333% - 20px);
+			float: left;
 		}
 		i {
 			float: left;
