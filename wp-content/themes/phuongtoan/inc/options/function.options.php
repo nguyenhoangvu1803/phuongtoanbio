@@ -245,7 +245,7 @@ $this->sections[] = array(
 			'title' => 'Background Color',
             'type' => 'color_rgba',
 			'default' => array(
-				'color' => '#f6f6f6',
+				'color' => '#009400',
 				'alpha' => 1,
 			),
 			'subtitle' => esc_html__( 'Background 100% width header.', 'ori' )
