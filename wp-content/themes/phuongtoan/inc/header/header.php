@@ -99,8 +99,6 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 				<?php 
 					if(is_active_sidebar('header-address')) dynamic_sidebar('header-address');
 				?>
-			</div>
-			<div class="col-xs-12">
 				<div class="company-info">
 					<span class="company-sologan">
 						<?php 
