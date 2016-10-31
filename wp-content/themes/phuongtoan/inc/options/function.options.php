@@ -304,7 +304,7 @@ $this->sections[] = array(
             'title' => __('Sologan', 'ori'),
             'id' => 'text_logo',
             'type' => 'text',
-            'default' => 'Men Vi Sinh Xử Lý Chất Thải'
+            'default' => 'VÌ MỘT MÔI TRƯỜNG TRONG SẠCH & PHÁT TRIỂN BỀN VỮNG'
         )
 	)
 );
