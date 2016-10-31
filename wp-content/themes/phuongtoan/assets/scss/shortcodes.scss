@@ -1247,6 +1247,12 @@
 			}
 		}
 	}
+	@include breakpoint-in(768px,992px){
+		.zo-md-4cols .zo-grid-item:nth-child(3){
+			clear: both;
+		}
+	}
+	.zo-md-4cols
 	.zo-grid-title {
 		font-size: 16px;
 		text-transform: uppercase;
