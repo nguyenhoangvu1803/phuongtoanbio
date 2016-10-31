@@ -100,6 +100,14 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 					if(is_active_sidebar('header-address')) dynamic_sidebar('header-address');
 				?>
 			</div>
+			<div class="col-xs-12">
+			<span class="company-sologan">
+				<?php 
+					$slogan = !empty($smof_data['text_logo']) ? $smof_data['text_logo']: '';
+					$slogan = !empty($zo_meta->_zo_header_logo_slogan) ? $zo_meta->_zo_header_logo_slogan: $slogan;
+					echo esc_attr($slogan);
+				?>
+			</span>
 		</div>
 	</div>
 </div>
