@@ -11,6 +11,7 @@ global $smof_data, $zo_meta;
 $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) ? 'container-fluid' : 'container';
 ?>
 
+<!--
 <div id="zo-header-top">
 	<div class="<?php echo esc_attr($container);?>">
 		<div class="row">
@@ -34,24 +35,7 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 		</div>
 	</div>
 </div>
-
-<div id="zo-header-logo">
-	<div class="<?php echo esc_attr($container);?>">
-		<div class="row">
-			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">			
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img class="main-logo" alt="<?php echo get_bloginfo ('name');?>" src="<?php echo esc_url(zo_page_header_logo()); ?>">
-					<?php //echo zo_page_header_sticky_logo(); ?>
-				</a>
-			</div>
-			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">		
-				<?php 
-					if(is_active_sidebar('header-address')) dynamic_sidebar('header-address');
-				?>
-			</div>
-		</div>
-	</div>
-</div>
+-->
 
 <!-- Header Navigation -->
 <div id="zo-header" class="zo-main-header header-default <?php if ($smof_data['menu_sticky_tablets']) {
@@ -101,3 +85,21 @@ $container = (!empty($smof_data['header_width']) && $smof_data['header_width']) 
 	<!-- #site-navigation -->
 </div>
 <!--#zo-header-->
+
+<div id="zo-header-logo">
+	<div class="<?php echo esc_attr($container);?>">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">			
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<img class="main-logo" alt="<?php echo get_bloginfo ('name');?>" src="<?php echo esc_url(zo_page_header_logo()); ?>">
+					<?php //echo zo_page_header_sticky_logo(); ?>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">		
+				<?php 
+					if(is_active_sidebar('header-address')) dynamic_sidebar('header-address');
+				?>
+			</div>
+		</div>
+	</div>
+</div>
