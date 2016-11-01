@@ -67,7 +67,6 @@
 
 .company-info {
 	text-align: center;
-	margin-top: 5px;
 	.company-name {
 		color: $primary_color;
 		font-size: 30px;
@@ -81,13 +80,22 @@
 		font-style: italic;
 		color: #51504e;
 		position: relative;
+		display: inline-block !important;
 		&:before {
+			position: absolute;
+			content: "\f10e";
+			font-family: FontAwesome;
+			right: -10px;
+			top: -5px;
+			font-size: 10px;
+		}
+		&:after {
 			position: absolute;
 			content: "\f10d";
 			font-family: FontAwesome;
-			left: -5px;
+			left: -10px;
 			top: -5px;
-			font-size: 20px;
+			font-size: 10px;
 		}
 	}
 }
