@@ -304,7 +304,7 @@ $this->sections[] = array(
             'title' => __('Sologan', 'ori'),
             'id' => 'text_logo',
             'type' => 'text',
-            'default' => 'VÌ MỘT MÔI TRƯỜNG TRONG SẠCH & PHÁT TRIỂN BỀN VỮNG'
+            'default' => 'Vì Một Môi Trường Trong Sạch & Phát Triển Bền Vững'
         )
 	)
 );
