@@ -67,7 +67,7 @@
 
 .company-info {
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 5px;
 	.company-name {
 		color: $primary_color;
 		font-size: 30px;
@@ -76,8 +76,19 @@
 	}
 	.company-sologan {
 		text-align: center;
-		font-size: 16px;
+		font-size: 13px;
 		line-height: 30px;
+		font-style: italic;
+		color: #51504e;
+		position: relative;
+		&:before {
+			position: absolute;
+			content: "\f10d";
+			font-family: FontAwesome;
+			left: -5px;
+			top: -5px;
+			font-size: 20px;
+		}
 	}
 }
 
