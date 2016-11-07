@@ -12,10 +12,10 @@
     <?php if(has_post_thumbnail()) : ?>
     <div class="zo-blog-image">
         <a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel=""><?php the_post_thumbnail( 'full' ); ?></a>
-		<div class="zo-blog-date">
+		<!--<div class="zo-blog-date">
 			<span class="day"><?php echo get_the_date("d"); ?></span>
 			<span class="month-yeah"><?php echo get_the_date("M, Y"); ?></span>
-		</div>
+		</div>-->
     </div>
     <?php endif ?>
 
