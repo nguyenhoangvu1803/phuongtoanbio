@@ -8,9 +8,6 @@
 }
 
 @include breakpoint-max(992px) {
-	body .container {
-		width: 100%;
-	}
 	body #zo-header {
 		position: absolute;
 	}
