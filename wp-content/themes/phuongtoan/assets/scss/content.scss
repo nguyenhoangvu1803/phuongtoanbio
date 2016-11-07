@@ -747,4 +747,7 @@ body.error404{
 		cursor: pointer;
 		color: #009400;
 	}
+	@include breakpoint-in(768px,992px) {
+		font-size: 18px;
+	}
 }
