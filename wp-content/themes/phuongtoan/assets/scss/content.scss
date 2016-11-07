@@ -105,6 +105,10 @@
 		border-bottom: 3px solid #171717;
 		margin-bottom: 30px;
 		padding-bottom: 40px;
+		.zo-blog-image img {
+			max-height: 400px;
+			width: initial !important;
+		}
 	}
 }
 .blog, .archive, .search, .single, .page-template {
